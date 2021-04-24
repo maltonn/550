@@ -1,39 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel='stylesheet' href='css/style.css'>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学食ぴったり550円ガチャ</title>
+  <link rel='stylesheet' href='css/style.css'>
+  <link rel='stylesheet' href='css/radio.css'>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
   <h1>学食ぴったり550円ガチャ</h1>
   <main>
     <h3>あなたの今日の献立は・・・</h3>
     <div id='main_contents'>
     </div>
-    <div id='main_btn'>ガチャを引く！</div>
+    <div id='main_btn' class="flex">ガチャを引く！</div>
   </main>
 
   <i id="close_menus_list" class="far fa-times-circle"></i>
   <i id="close_settings" class="far fa-times-circle"></i>
-  <div id="menus_list_btn" class="btn1">
+  <div id="menus_list_btn" class="btn1 flex">
     <i class="fas fa-align-left"></i>
   </div>
-  <div id="settings_btn" class="btn1">
+  <div id="settings_btn" class="btn1 flex">
     <i class="fas fa-cog"></i>
   </div>
 
-  <div id="menus_list"></div>
-  <div id="settings"></div>
+  <div id="menus_list" class="flex"></div>
+  <div id="settings">
+    <div>ライス</div>
+    <div class="small">注：「おまかせ」以外を選ぶと「ぴったり550円」が不可能になるため、自動的に5円程の誤差を許容するモードになります。</div>
+    <br>
+
+    <div class="radios-boxes">
+      <div class="radios">
+        <input type="radio" name="radio" id="radio1" class="radio active" value="r">
+        <input type="radio" name="radio" id="radio2" class="radio" value="k">
+        <input type="radio" name="radio" id="radio3" class="radio" value="t">
+        <input type="radio" name="radio" id="radio4" class="radio" value="s">
+        <input type="radio" name="radio" id="radio5" class="radio" value="s">
+        <div class="ball"></div>
+      </div>
+      <div class="labels">
+        <label for="radio1" class="label">おまかせ</label>
+        <label for="radio2" class="label">SS</label>
+        <label for="radio3" class="label">S</label>
+        <label for="radio4" class="label">M</label>
+        <label for="radio5" class="label">L</label>
+      </div>
+    </div>
+
+
+  </div>
   <script src='js/contents.js'></script>
   <script src='js/main.js'></script>
+
+  <script src='js/radio.js'></script>
+
+  
+  <svg class="filter" version="1.1">
+    <defs>
+      <filter id="gooeyness">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10" result="gooey" />
+        <feComposite in="SourceGraphic" in2="gooey" operator="atop" />
+      </filter>
+    </defs>
+  </svg>
+
 </body>
 
 </html>

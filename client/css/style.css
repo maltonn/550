@@ -11,7 +11,7 @@ body {
   font-family: 'Kiwi Maru', serif;
 }
 
-div {
+.flex {
   margin: 0;
   display: flex;
   justify-content: center;
@@ -133,4 +133,16 @@ main > h3{
 }
 #menus_list>div>div:last-child{
   width: 30%;
+}
+
+
+#settings{
+  padding: 10%;
+  width:80%;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.small{
+  font-size:50%;
 }
