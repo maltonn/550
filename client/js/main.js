@@ -61,9 +61,6 @@ for(j=0;j<colab2.length;j++){
     }
   }
 }
-console.log(rice_filter)
-
-console.log(colab2[83])
 
 main_btn.addEventListener('click',()=>{
   main_contents.innerHTML=''
