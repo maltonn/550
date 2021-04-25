@@ -49,12 +49,11 @@ def main():
                 idx+=1
             else:
                 break
-    
+
     for i in range(10):
         print(results[i])
     print('...\n')
     print(len(results),'種類\n')
-
     results2=[]
     for menu,price in zip(menus_lst_1,price_lst_1):
         idx=bisect_left(price_lst_2,550-price-5)
@@ -70,7 +69,6 @@ def main():
                 else:
                     flag=True
                     idx+=1
-
 
     for i in range(10):
         print(results2[i])
